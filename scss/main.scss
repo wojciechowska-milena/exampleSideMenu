@@ -1,0 +1,55 @@
+// color palete
+$gradient_col: #86edad;
+$menu_col: #096e06;
+$dark_col: #333;
+$light_col: #fff;
+$accent_col: #125328;
+$bg_primary: #f3f2e6;
+
+$menu_size: 20%;
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg_primary;
+  // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Raleway", sans-serif;
+  color: $dark_col;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+header {
+  max-width: -webkit-calc(#{100%} - #{$menu_size});
+  max-width: -moz-calc(#{100%} - #{$menu_size});
+  max-width: calc(#{100%} - #{$menu_size});
+  margin-left: $menu_size;
+}
+
+main {
+  max-width: -webkit-calc(#{100%} - #{$menu_size});
+  max-width: -moz-calc(#{100%} - #{$menu_size});
+  max-width: calc(#{100%} - #{$menu_size});
+  margin-left: $menu_size;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.75em;
+  color: $accent_col;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75em;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+}
