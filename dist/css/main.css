@@ -102,7 +102,7 @@ h3 {
   text-align: center; }
   #showcase .bg-img {
     position: absolute;
-    background: #333 url("/dist/img/showcase.jpg");
+    background: #333 url("../img/showcase.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
