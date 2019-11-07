@@ -137,12 +137,13 @@ h3 {
   .box-a p {
     text-align: justify; }
 
-.box-b {
+.box-4 {
   display: grid;
+  width: 100%;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem; }
-  .box-b p {
+  .box-4 p {
     text-align: justify; }
 
 .box-5 {
@@ -151,14 +152,16 @@ h3 {
   align-content: center; }
   .box-5 p {
     text-align: justify; }
-  .box-5 .list-wrap {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr); }
-    .box-5 .list-wrap .card {
-      place-self: center; }
-      .box-5 .list-wrap .card .img-box {
-        display: flex; }
+  .box-5 .offer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .box-5 .offer-box .offer {
+      border: #125328 2px solid;
+      margin-bottom: 20px; }
+      .box-5 .offer-box .offer p {
+        width: 250px;
+        margin: 20px; }
 
 .box-6 {
   display: grid;
