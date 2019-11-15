@@ -1,12 +1,4 @@
-// color palete
-$gradient_col: #86edad;
-$menu_col: #096e06;
-$dark_col: #333;
-$light_col: #fff;
-$accent_col: #125328;
-$bg_primary: #f3f2e6;
-
-$menu_size: 20%;
+@import "config";
 
 * {
   margin: 0;
@@ -178,13 +170,23 @@ h3 {
 .box-a {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
   align-content: center;
   p {
     text-align: justify;
   }
 }
+.box-1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "image-wrap text-wrap text-wrap "
+    "image-wrap text-wrap2 text-wrap2";
+}
+
+.box-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 // what section
 
 .box-4 {
@@ -223,6 +225,7 @@ h3 {
   }
 }
 // contact section
+
 .box-6 {
   display: grid;
   grid-gap: 20px;
@@ -244,3 +247,6 @@ section {
   min-height: 700px;
   padding: 10px 20px;
 }
+
+//modification for  responsive design
+@import "mobile";

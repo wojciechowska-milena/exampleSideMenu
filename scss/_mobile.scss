@@ -1,0 +1,44 @@
+//Widescreen
+@include mediaXL {
+}
+
+//Desktops
+@include mediaLg {
+  .box-1 {
+    grid-template-areas:
+      "image-wrap text-wrap "
+      ". text-wrap2";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+//Tablets
+@include mediaMd {
+  .box-1 {
+    grid-template-areas:
+      "image-wrap"
+      " text-wrap "
+      " text-wrap2";
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box-2 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "image-wrap"
+      "text-wrap";
+  }
+
+  .box-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .box-6 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+//Smartphone
+@include mediaSm {
+}

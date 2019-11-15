@@ -131,11 +131,17 @@ h3 {
 .box-a {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
   align-content: center; }
   .box-a p {
     text-align: justify; }
+
+.box-1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "image-wrap text-wrap text-wrap " "image-wrap text-wrap2 text-wrap2"; }
+
+.box-2 {
+  grid-template-columns: repeat(2, 1fr); }
 
 .box-4 {
   display: grid;
@@ -179,3 +185,22 @@ h3 {
 section {
   min-height: 700px;
   padding: 10px 20px; }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .box-1 {
+    grid-template-areas: "image-wrap text-wrap " ". text-wrap2";
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  .box-1 {
+    grid-template-areas: "image-wrap" " text-wrap " " text-wrap2";
+    grid-template-columns: repeat(1, 1fr); }
+  .box-2 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "image-wrap" "text-wrap"; }
+  .box-4 {
+    grid-template-columns: repeat(1, 1fr); }
+  .box-6 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr); } }
