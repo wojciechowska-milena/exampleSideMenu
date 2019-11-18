@@ -1,4 +1,4 @@
-@import "config";
+@import 'config';
 
 * {
   margin: 0;
@@ -11,9 +11,9 @@
 body {
   background: $bg_primary;
   // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: $dark_col;
-  font-size: 1.1em;
+  font-size: 1.12em;
   line-height: 1.5;
   text-align: center;
 }
@@ -33,20 +33,26 @@ main {
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.75em;
   color: $accent_col;
 }
 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.75em;
 }
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
 }
 
 #sidebar {
+  /*btn for mobile*/
+  .btn {
+    width: 50px;
+    background: black;
+    height: 50px;
+  }
   /* background shade */
   background: $menu_col; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, $gradient_col, $menu_col); /* Chrome 10-25, Safari 5.1-6 */
@@ -56,7 +62,7 @@ h3 {
     $menu_col
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
   font-style: italic;
   font-weight: semi-bold;
@@ -104,7 +110,7 @@ h3 {
     // hover needs colro
 
     &:after {
-      content: "";
+      content: '';
       background: $accent_col;
       display: block;
       width: 100%;
@@ -135,7 +141,7 @@ h3 {
 
   .bg-img {
     position: absolute;
-    background: $dark_col url("../img/showcase.jpg"); // Photo by Dorian Mongel https://unsplash.com/@_dorian_  on Unsplash https://unsplash.com/
+    background: $dark_col url('../img/showcase.jpg'); // Photo by Dorian Mongel https://unsplash.com/@_dorian_  on Unsplash https://unsplash.com/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -177,23 +183,47 @@ h3 {
   }
 }
 .box-1 {
-  grid-template-columns: repeat(3, 1fr);
+  .image-a1 {
+    grid-area: image-a1;
+  }
+  .text-a1 {
+    grid-area: text-a1;
+  }
+  .text-a2 {
+    grid-area: text-a2;
+  }
   grid-template-areas:
-    "image-wrap text-wrap text-wrap "
-    "image-wrap text-wrap2 text-wrap2";
+    'image-a1 text-a1 text-a1 '
+    'image-a1 text-a2 text-a2';
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .box-2 {
+  .image-a2 {
+    grid-area: image-a2;
+  }
+  .text-a3 {
+    grid-area: text-a3;
+  }
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 'text-a3 image-a2';
 }
 
 // what section
 
 .box-4 {
+  .image-wrap {
+    grid-area: image-b1;
+  }
+  .text-wrap {
+    grid-area: text-b1;
+  }
   display: grid;
   width: 100%;
   grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'image-b1 text-b1 text-b1';
+
   padding: 1rem;
   // align-content: center;
   p {
@@ -232,7 +262,7 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
   text-align: left;
-  // align-content: center;
+
   p {
     text-align: justify;
   }
@@ -249,4 +279,4 @@ section {
 }
 
 //modification for  responsive design
-@import "mobile";
+@import 'mobile';

@@ -1,13 +1,9 @@
-//Widescreen
-@include mediaXL {
-}
-
 //Desktops
 @include mediaLg {
   .box-1 {
     grid-template-areas:
-      "image-wrap text-wrap "
-      ". text-wrap2";
+      'image-a1 text-a1 '
+      'text-a2 text-a2';
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -16,29 +12,41 @@
 @include mediaMd {
   .box-1 {
     grid-template-areas:
-      "image-wrap"
-      " text-wrap "
-      " text-wrap2";
+      'image-a1'
+      'text-a1'
+      'text-a2';
     grid-template-columns: repeat(1, 1fr);
   }
 
   .box-2 {
-    grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
-      "image-wrap"
-      "text-wrap";
+      'image-a2'
+      'text-a3';
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .box-4 {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      'image-b1'
+      'text-b1';
   }
+
   .box-6 {
-    display: grid;
-    grid-gap: 20px;
+    .map {
+      grid-area: 'map';
+    }
+    .text-wrap {
+      grid-area: 'text-c';
+    }
+
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 'text-c' 'map';
   }
 }
 
 //Smartphone
 @include mediaSm {
+  #sidebar {
+  }
 }
